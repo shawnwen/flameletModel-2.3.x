@@ -163,15 +163,22 @@ edges
 (                                    
 );                                   
                                      
-patches                              
+boundary                              
 (                                    
-    patch inletfuel                  
-    (                                
-        (6 7 8 6)                    
-    )                                
+    inletfuel                  
+    {
+	type patch;                               
+	faces
+        ( 
+        	(6 7 8 6)
+	);                    
+    }                                
                                      
-    patch inletair                   
-    (                                
+    inletair                   
+    {
+	type patch;                                
+	faces
+	( 
         (17 63 64 18)
 //	(19 21 22 20)
 //	(21 31 32 22)
@@ -179,29 +186,42 @@ patches
 //	(37 47 48 38)
 //	(47 53 54 48)
 //	(53 63 64 54) 
-    )                                
+	);
+    }                                
                      
                 
-    patch outlet                     
-    (
+    outlet                     
+    {
+	type patch;
+	faces
+	( 
 	(3 4 5 3)
 	(4 11 12 5)
 	(11 67 68 12)
 //	(59 61 62 60)
-    )                                
+	);
+    }                                
                                      
-    empty axis                       
-    (                                
+    axis                       
+    {
+	type empty;                                
+	faces
+	( 
         (0 3 3 0)                    
         (0 6 6 0)                    
-    )                                
+	);
+    }                                
     
                                  
-    wall sidewall
-    (                                    
+    sidewall
+    {
+	type wall;                                    
+	faces
+	( 
 	(63 64 66 65)
 	(65 66 68 67)
-    )                                
+	);
+    }                                
 
 //    wall outletwall
 //    (
@@ -225,15 +245,22 @@ patches
 //	(57 67 68 58)
 //    )
                                      
-    wall burnerwall                  
-    (                                
+    burnerwall                  
+    {
+	type wall;                                
+	faces
+	( 
         (7 1 2 8)                    
         (1 9 10 2)                 
         (9 10 18 17)                   
-    )                                
+	);
+    }                                
                                      
-    wedge front                      
-    (
+    front                      
+    {
+	type patch;
+	faces
+	( 
 	(3 4 1 0)
 	(0 1 7 6)
 
@@ -262,11 +289,14 @@ patches
 
 //	(53 63 65 55)
 //	(55 65 67 57)
-	
-    )                                
+	);
+    }                                
                                      
-    wedge back                       
-    (
+    back                       
+    {
+	type patch;
+	faces
+	( 
 	(3 5 2 0)
 	(0 2 8 6)
 	
@@ -295,7 +325,8 @@ patches
 
 //	(54 64 66 56)
 //	(56 66 68 58)
-    )                             
+	);
+    }                             
                                      
 );                                   
                                      
